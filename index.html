@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Watchdog for Roblox</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-wrap">
+    <header class="hero">
+      <!-- LEFT COLUMN -->
+      <div class="hero__content">
+        <p class="eyebrow">WATCHDOG FOR ROBLOX</p>
+        <h1 class="title">Keep Roblox Running — <br>Automatically</h1>
+        <p class="subtitle">
+          Auto-Restart your Roblox client after crashes or disconnects.
+          Stay in the game — always.
+        </p>
+
+        <div class="cta">
+          <a class="btn btn--primary" href="#" id="downloadBtn">Get Access</a>
+        </div>
+
+        <p class="note">No config. No ads. Works offline.</p>
+
+        <!-- APP WINDOW lives INSIDE the left column so it sits under the buttons -->
+        <section class="app-window" aria-label="Watchdog app window">
+          <div class="app-window__head">Watchdog</div>
+          <div class="app-window__body">
+            <button class="start-btn" type="button">Start</button>
+            <ul class="log">
+              <li><time>10:52 AM</time>Restarted successfully</li>
+              <li><time>10:48 AM</time>Disconnected from Roblox</li>
+              <li><time>10:48 AM</time>Monitoring started</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <!-- RIGHT COLUMN: ONLY the character -->
+      <div class="hero__visual">
+        <img
+          class="character"
+          src="assets/roblox-character.webp"
+          alt="Roblox-style character"
+          width="560"
+          height="560"
+          decoding="async"
+          loading="eager"
+        />
+      </div>
+    </header>
+  </div>
+</body>
+</html>
