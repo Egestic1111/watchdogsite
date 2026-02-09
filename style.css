@@ -74,7 +74,7 @@ body{
   margin-right:10px;
   color:#58a6ff;
 }
-.cta{display:flex;gap:14px;flex-wrap:wrap}
+.cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 .btn{
   display:inline-flex;align-items:center;justify-content:center;
   border-radius:12px;padding:20px 60px;
@@ -96,6 +96,39 @@ body{
 .trust p{margin:0}
 .trust p + p{margin-top:4px}
 .trust em{font-style:italic}
+.brand-links{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+.brand-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:11px 14px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px;
+  transition:.18s ease;
+  border:1px solid transparent;
+}
+.brand-btn__icon{width:16px;height:16px;fill:currentColor;opacity:.98}
+.brand-btn:hover{transform:translateY(-1px)}
+.brand-btn--github{
+  background:#0b0d10;
+  color:#ffffff;
+  border-color:#2b2f36;
+  box-shadow:0 10px 24px rgba(0,0,0,.30);
+}
+.brand-btn--github:hover{filter:brightness(1.06)}
+.brand-btn--boosty{
+  background:linear-gradient(180deg, #ff7a2f, #f15a24);
+  color:#ffffff;
+  border-color:rgba(255,255,255,.16);
+  box-shadow:0 12px 26px rgba(241,90,36,.18);
+}
+.brand-btn--boosty:hover{filter:brightness(1.05)}
+.brand-btn--mini{
+  padding:8px 10px;
+  font-size:12px;
+  border-radius:12px;
+}
+.brand-btn--mini .brand-btn__icon{width:14px;height:14px}
 /* Two columns: content on left, character on right */
 .hero{
   max-width:1100px;
@@ -165,7 +198,16 @@ body{
 .log time{color:#58a6ff;margin-right:8px;display:inline-block;min-width:70px}
 .how{
   padding-top:28px;
-  border-top:none !important;
+  border-top:1px solid var(--stroke);
+}
+.how__links{margin-top:18px}
+.how__links-label{
+  margin:0 0 10px;
+  color:#ffffff;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
 }
 .how__title{
   margin:0 0 16px;
@@ -180,13 +222,23 @@ body{
   align-items:center;
   justify-content:space-between;
   gap:20px;
+  position:relative;
 }
 .how__text{
   flex: 0 1 420px;
   display:flex;
   flex-direction:column;
   justify-content:center;
-  padding:8px 0;
+  /* Leave room for the absolute-positioned links row */
+  padding:42px 0 8px;
+}
+.how__toplinks{
+  position:absolute;
+  left:0;
+  top:0;
+  display:flex;
+  gap:12px;
+  align-items:center;
 }
 .how__steps{
   margin:0;
@@ -221,6 +273,11 @@ body{
   .character{width:min(380px, 60vw); translate: 0 0}
   .demo-video{width:min(420px, 80vw)}
   .app-window{max-width:100%}
+  .how__toplinks{
+    left:50%;
+    transform:translateX(-50%);
+    top:0;
+  }
 }
 @media (max-width: 560px){
   .page-wrap{padding:32px 16px 56px}
