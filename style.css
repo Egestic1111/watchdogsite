@@ -165,7 +165,7 @@ body{
 .log time{color:#58a6ff;margin-right:8px;display:inline-block;min-width:70px}
 .how{
   padding-top:28px;
-  border-top:1px solid var(--stroke);
+  border-top:none !important;
 }
 .how__title{
   margin:0 0 16px;
