@@ -28,7 +28,7 @@
               GitHub Pages: keep StudioWatchdog.exe at the site root so this link downloads it directly.
               Example URL: https://<user>.github.io/<repo>/StudioWatchdog.exe
             -->
-            <a class="btn btn--primary" href="StudioWatchdog.exe" download="StudioWatchdog.exe" id="downloadBtn">Download for Windows</a>
+            <a class="btn btn--primary" href="./StudioWatchdog.exe" download="StudioWatchdog.exe" id="downloadBtn">Download for Windows</a>
           </div>
 
           <div class="trust">
@@ -84,5 +84,29 @@
       </section>
     </header>
   </div>
+  <script>
+    // Make the download button robust across custom domains / subpaths on GitHub Pages.
+    // Also force a "Save as" style download where supported.
+    (function () {
+      const btn = document.getElementById("downloadBtn");
+      if (!btn) return;
+
+      const filename = "StudioWatchdog.exe";
+      const url = new URL(filename, window.location.href).toString();
+      btn.href = url;
+      btn.setAttribute("download", filename);
+
+      btn.addEventListener("click", function (e) {
+        // If the browser ignores the download attribute, following the URL still triggers a download.
+        e.preventDefault();
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+      });
+    })();
+  </script>
 </body>
 </html>
