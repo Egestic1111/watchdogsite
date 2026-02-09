@@ -5,53 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Watchdog for Roblox</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="page-wrap">
     <header class="hero">
-      <!-- LEFT COLUMN -->
-      <div class="hero__content">
-        <p class="eyebrow">WATCHDOG FOR ROBLOX</p>
-        <h1 class="title">Keep Roblox Running — <br>Automatically</h1>
-        <p class="subtitle">
-          Auto-Restart your Roblox client after crashes or disconnects.
-          Stay in the game — always.
-        </p>
+      <div class="hero__row">
+        <!-- LEFT COLUMN -->
+        <div class="hero__content">
+          <p class="eyebrow">WATCHDOG FOR ROBLOX STUDIO</p>
+          <h1 class="title"><span class="title__main">Roblox Studio</span><br><span class="title__main title__gap">crashed again?</span><span class="title__sub">It restarts<br>automatically</span></h1>
+          <p class="subtitle">You don't lose context.</p>
+          <ul class="features">
+            <li>Auto-restarts after crashes</li>
+            <li>Zero setup. Runs quietly in the background</li>
+            <li>Works offline and stays lightweight</li>
+          </ul>
 
-        <div class="cta">
-          <a class="btn btn--primary" href="#" id="downloadBtn">Get Access</a>
+          <div class="cta">
+            <a class="btn btn--primary" href="#" id="downloadBtn">Download for Windows</a>
+          </div>
+
+          <div class="trust">
+            <p>Instant. Saves time first. Payment later.</p>
+            <p><em>A tool, not a service</em></p>
+          </div>
+
+          <!--
+          <section class="app-window" aria-label="Watchdog app window">
+            <div class="app-window__head">Watchdog</div>
+            <div class="app-window__body">
+              <button class="start-btn" type="button">Start</button>
+              <ul class="log">
+                <li><time>10:52 AM</time>Restarted successfully</li>
+                <li><time>10:48 AM</time>Disconnected from Roblox Studio</li>
+                <li><time>10:48 AM</time>Monitoring started</li>
+              </ul>
+            </div>
+          </section>
+          -->
         </div>
 
-        <p class="note">No config. No ads. Works offline.</p>
+        <!-- RIGHT COLUMN: ONLY the character -->
+        <div class="hero__visual">
+          <img
+            class="character"
+            src="assets/roblox-character.webp"
+            alt="Roblox-style character"
+            width="560"
+            height="560"
+            decoding="async"
+            loading="eager"
+          />
+        </div>
+      </div>
 
-        <!-- APP WINDOW lives INSIDE the left column so it sits under the buttons -->
-        <section class="app-window" aria-label="Watchdog app window">
-          <div class="app-window__head">Watchdog</div>
-          <div class="app-window__body">
-            <button class="start-btn" type="button">Start</button>
-            <ul class="log">
-              <li><time>10:52 AM</time>Restarted successfully</li>
-              <li><time>10:48 AM</time>Disconnected from Roblox</li>
-              <li><time>10:48 AM</time>Monitoring started</li>
-            </ul>
+      <section class="how" aria-label="How it works">
+        <div class="how__grid">
+          <div class="how__text">
+            <h2 class="how__title">How it works</h2>
+            <ol class="how__steps">
+              <li>Install Watchdog</li>
+              <li>Start Roblox Studio as usual</li>
+              <li>Watchdog restarts it if it crashes</li>
+            </ol>
           </div>
-        </section>
-      </div>
-
-      <!-- RIGHT COLUMN: ONLY the character -->
-      <div class="hero__visual">
-        <img
-          class="character"
-          src="assets/roblox-character.webp"
-          alt="Roblox-style character"
-          width="560"
-          height="560"
-          decoding="async"
-          loading="eager"
-        />
-      </div>
+          <div class="hero__video">
+            <video class="demo-video" autoplay loop muted playsinline preload="metadata">
+              <source src="assets/watchdog_demo_720p.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </section>
     </header>
   </div>
 </body>
