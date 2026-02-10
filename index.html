@@ -115,6 +115,7 @@
       btn.addEventListener("click", function (e) {
         // If the browser ignores the download attribute, following the URL still triggers a download.
         e.preventDefault();
+          try { navigator.sendBeacon('https://watchdog-track.studiowatchdog.workers.dev/track/download', '1'); } catch (e) {}
         const a = document.createElement("a");
         a.href = url;
         a.download = filename;
